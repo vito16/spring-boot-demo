@@ -10,17 +10,12 @@
 package com.vito16.boot.test;
 
 import com.vito16.boot.AppConfig;
-import com.vito16.boot.entity.User;
-import com.vito16.boot.repository.UserRepository;
-import com.vito16.boot.service.TaskService;
+import com.vito16.boot.service.UserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
-import javax.sql.DataSource;
-import java.sql.SQLException;
 
 /**
  * @author 木鱼 muyu@yiji.com
@@ -31,13 +26,10 @@ import java.sql.SQLException;
 public class AppTest {
 
     @Autowired
-    TaskService taskService;
-
-    @Autowired
-    UserRepository userRepository;
+    UserService userService;
 
     @Test
-    public void testDoTask(){
-        taskService.doTask();
+    public void testSaveUser(){
+        userService.doSaveUser();
     }
 }
