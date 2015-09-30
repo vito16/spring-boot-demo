@@ -7,13 +7,14 @@
  * 修订记录：
  * muyu@yiji.com 2015-09-29 29:23:56 创建
  */
-package com.vito16.boot.repository;
+package com.vito16.boot.transaction.repository;
 
-import com.vito16.boot.entity.User;
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
+import com.vito16.boot.transaction.entity.User;
 
 /**
  * @author 木鱼 muyu@yiji.com

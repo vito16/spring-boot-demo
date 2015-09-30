@@ -7,10 +7,11 @@
  * 修订记录：
  * muyu@yiji.com 2015-09-29 29:23:45 创建
  */
-package com.vito16.boot.entity;
+package com.vito16.boot.transaction.entity;
+
+import java.util.Date;
 
 import javax.persistence.*;
-import java.util.Date;
 
 /**
  * @author 木鱼 muyu@yiji.com

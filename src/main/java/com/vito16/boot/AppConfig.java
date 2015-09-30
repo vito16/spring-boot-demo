@@ -10,7 +10,10 @@
 package com.vito16.boot;
 
 
-import jdk.nashorn.internal.objects.annotations.ScriptClass;
+import java.util.Properties;
+
+import javax.persistence.EntityManagerFactory;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Bean;
@@ -27,9 +30,6 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import com.alibaba.druid.pool.DruidDataSource;
-
-import javax.persistence.EntityManagerFactory;
-import java.util.Properties;
 
 /**
  * @author 木鱼 muyu@yiji.com

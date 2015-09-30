@@ -1,3 +1,5 @@
 ##Spring-boot Hello World!
-基于Spring-boot的一个Hello World用例.  
-包含一些测试玩的东东,比如嵌套事务啊什么什么的.
+基于Spring-boot的一个小测试代码.   
+
+- com.vito16.boot.transaction 事务相关  
+- com.vito16.boot.cache 缓存相关  
