@@ -38,7 +38,6 @@ import com.alibaba.druid.pool.DruidDataSource;
 @EnableTransactionManagement
 @EnableAutoConfiguration
 @EnableJpaRepositories
-@EnableAspectJAutoProxy(proxyTargetClass = true)
 @ComponentScan(basePackages = "com.vito16.boot")
 @PropertySource("classpath:db.properties")
 public class AppConfig {
