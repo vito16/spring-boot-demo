@@ -30,6 +30,26 @@ public class UserService {
     @Autowired
     OtherService otherService;
 
+
+    /**
+     * 保存用户1
+     * 循环保存用户11-13
+     * 更新用户1
+     */
+
+    @Transactional(propagation = Propagation.REQUIRED)
+    public void saveTestTransaction() {
+        User user = new User("vito", "zhou");
+        userRepository.save(user);
+        for(int i=0;i<3;i++){
+            otherService.doTaskProcess(i);
+//            doTaskProcess(i);
+        }
+        user.setLastName("zhou2");
+        userRepository.save(user);
+    }
+
+
     @Transactional(propagation = Propagation.REQUIRED)
     public void doSaveUserSelf() {
         userRepository.save(new User("vito","zhou"));
@@ -37,6 +57,8 @@ public class UserService {
             doTaskProcess(i);
         }
     }
+
+
 
     @Transactional(propagation = Propagation.REQUIRED)
     public void doSaveUserOther() {

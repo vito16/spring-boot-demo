@@ -49,4 +49,9 @@ public class TransactionPropagationTest {
     public void testSaveUserOther(){
         userService.doSaveUserOther();
     }
+
+    @Test
+    public void testSaveTestTransaction(){
+        userService.saveTestTransaction();
+    }
 }
