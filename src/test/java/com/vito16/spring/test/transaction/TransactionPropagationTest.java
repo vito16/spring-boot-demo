@@ -7,7 +7,7 @@
  * 修订记录：
  * muyu@yiji.com 2015-09-29 29:10:33 创建
  */
-package com.vito16.boot.test.transaction;
+package com.vito16.spring.test.transaction;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -15,8 +15,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.vito16.boot.AppConfig;
-import com.vito16.boot.transaction.service.UserService;
+import com.vito16.spring.AppConfig;
+import com.vito16.spring.transaction.service.UserService;
 
 /**
  * Spring注解事务传播级别测试<br>

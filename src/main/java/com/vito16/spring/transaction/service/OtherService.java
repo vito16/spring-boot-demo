@@ -7,15 +7,15 @@
  * 修订记录：
  * muyu@yiji.com 2015-09-30 30:13:51 创建
  */
-package com.vito16.boot.transaction.service;
+package com.vito16.spring.transaction.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.vito16.boot.transaction.entity.User;
-import com.vito16.boot.transaction.repository.UserRepository;
+import com.vito16.spring.transaction.entity.User;
+import com.vito16.spring.transaction.repository.UserRepository;
 
 /**
  * @author 木鱼 muyu@yiji.com

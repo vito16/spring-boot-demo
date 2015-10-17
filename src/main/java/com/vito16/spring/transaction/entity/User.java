@@ -7,7 +7,7 @@
  * 修订记录：
  * muyu@yiji.com 2015-09-29 29:23:45 创建
  */
-package com.vito16.boot.transaction.entity;
+package com.vito16.spring.transaction.entity;
 
 import java.util.Date;
 

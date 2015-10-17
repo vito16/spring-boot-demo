@@ -7,7 +7,7 @@
  * 修订记录：
  * muyu@yiji.com 2015-09-29 29:09:25 创建
  */
-package com.vito16.boot;
+package com.vito16;
 
 
 import java.util.Properties;
@@ -18,7 +18,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
@@ -38,7 +37,7 @@ import com.alibaba.druid.pool.DruidDataSource;
 @EnableTransactionManagement
 @EnableAutoConfiguration
 @EnableJpaRepositories
-@ComponentScan(basePackages = "com.vito16.boot")
+@ComponentScan(basePackages = "com.vito16.spring")
 @PropertySource("classpath:db.properties")
 public class AppConfig {
 
@@ -70,7 +69,7 @@ public class AppConfig {
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
         LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
         em.setDataSource(dataSource());
-        em.setPackagesToScan(new String[]{"com.vito16.boot"});
+        em.setPackagesToScan(new String[]{"com.vito16.spring"});
 
         JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         em.setJpaVendorAdapter(vendorAdapter);
