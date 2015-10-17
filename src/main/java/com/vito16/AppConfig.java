@@ -37,7 +37,7 @@ import com.alibaba.druid.pool.DruidDataSource;
 @EnableTransactionManagement
 @EnableAutoConfiguration
 @EnableJpaRepositories
-@ComponentScan(basePackages = "com.vito16.spring")
+@ComponentScan(basePackages = "com.vito16")
 @PropertySource("classpath:db.properties")
 public class AppConfig {
 

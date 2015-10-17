@@ -9,13 +9,13 @@
  */
 package com.vito16.spring.test.transaction;
 
+import com.vito16.AppConfig;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.vito16.spring.AppConfig;
 import com.vito16.spring.transaction.service.UserService;
 
 /**
