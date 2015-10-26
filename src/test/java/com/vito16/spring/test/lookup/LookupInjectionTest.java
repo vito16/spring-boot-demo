@@ -13,10 +13,12 @@ import com.vito16.AppConfig;
 import com.vito16.spring.lookup.Chain;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
 
 /**
  * Lookup方式注入测试<br>
@@ -26,16 +28,24 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * @version 2015-10-17
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = {AppConfig.class})
-public class LookupInjectionTest {
+@ContextConfiguration(classes = { AppConfig.class })
+public class LookupInjectionTest implements ApplicationContextAware {
+	
+	ApplicationContext context;
+	
+	@Autowired
+	Chain runChain;
+	
+	@Test
+	public void testLook() {
+		for (int i = 0; i < 3; i++) {
+            System.out.println(runChain.toString()+" - - ");
+            runChain.process();
+		}
+	}
 
-    @Autowired
-    Chain chain;
-
-    @Test
-    public void testLook(){
-        for(int i = 0;i<3;i++){
-            chain.process();
-        }
+    @Override
+    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+        this.context = applicationContext;
     }
 }

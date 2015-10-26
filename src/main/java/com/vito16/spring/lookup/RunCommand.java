@@ -16,8 +16,6 @@ import org.springframework.stereotype.Component;
  * @author 木鱼 muyu@yiji.com
  * @version 2015-10-17
  */
-@Component
-@Scope("prototype")
 public class RunCommand implements Command {
     @Override
     public void action() {

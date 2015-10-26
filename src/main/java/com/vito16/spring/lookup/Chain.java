@@ -17,15 +17,12 @@ import org.springframework.stereotype.Service;
  * @author 木鱼 muyu@yiji.com
  * @version 2015-10-17
  */
-@Service
-public class Chain {
-
-    @Autowired
-    @Qualifier("runCommand")
-    private Command command;
+public abstract class Chain {
 
     public void process(){
-        command.action();
+        createCommand().action();
     }
+
+    protected abstract Command createCommand();
 
 }
